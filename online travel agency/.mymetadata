@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="online travel agency"
+  id="myeclipse.1385960589531"
+  context-root="/Ewheelz"
+  j2ee-spec="5.0"
+  archive="online travel agency.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>InitServlet</servlet-name>
+		<servlet-class>com.dts.core.util.InitServlet</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/config/system.properties</param-value>
+		</init-param>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>InitServlet</servlet-name>
+		<url-pattern>/initservlet</url-pattern>
+	</servlet-mapping>
+	<!-- Framework Controller Configuration -->
+	<servlet>
+		<servlet-name>DispatchController</servlet-name>
+		<servlet-class>
+			com.dts.core.control.DispatchController
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportController</servlet-name>
+		<servlet-class>
+			com.dts.core.control.ExportController
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ReportController</servlet-name>
+		<servlet-class>
+			com.dts.core.control.ReportController
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UIController</servlet-name>
+		<servlet-class>com.dts.core.control.UIController</servlet-class>
+	</servlet>
+	<!-- Framework Controller Mapping -->
+	<servlet-mapping>
+		<servlet-name>DispatchController</servlet-name>
+		<url-pattern>/DispatchController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportController</servlet-name>
+		<url-pattern>/ExportController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ReportController</servlet-name>
+		<url-pattern>/ReportController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UIController</servlet-name>
+		<url-pattern>/UIController</url-pattern>
+	</servlet-mapping>
+	<!-- Supported Export Modes of ExportController  -->
+	<servlet>
+		<servlet-name>ExportPDF</servlet-name>
+		<servlet-class>com.dts.core.export.ExportPDF</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportTXT</servlet-name>
+		<servlet-class>com.dts.core.export.ExportTXT</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExportXLS</servlet-name>
+		<servlet-class>com.dts.core.export.ExportXLS</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>RegisterAction</servlet-name>
+		<servlet-class>com.dts.dae.action.RegisterAction</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LoginAction</servlet-name>
+		<servlet-class>com.dts.dae.action.LoginAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>ChangequestionAction</servlet-name>
+		<servlet-class>
+			com.dts.dae.action.ChangequestionAction
+		</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<servlet-class>
+			com.dts.dae.action.ChangePasswordAction
+		</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<servlet-class>
+			com.dts.dae.action.RecoverPasswordAction
+		</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>ViewServlet</servlet-name>
+		<servlet-class>com.dts.dae.action.ViewServlet</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>UpdateAction</servlet-name>
+		<servlet-class>com.dts.dae.action.UpdateAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>FileUploadAction</servlet-name>
+		<servlet-class>
+			com.dts.dae.action.FileUploadAction
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ExportPDF</servlet-name>
+		<url-pattern>/ExportPDF</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportTXT</servlet-name>
+		<url-pattern>/ExportTXT</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExportXLS</servlet-name>
+		<url-pattern>/ExportXLS</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RegisterAction</servlet-name>
+		<url-pattern>/RegisterAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginAction</servlet-name>
+		<url-pattern>/LoginAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangequestionAction</servlet-name>
+		<url-pattern>/ChangequestionAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePasswordAction</servlet-name>
+		<url-pattern>/ChangePasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RecoverPasswordAction</servlet-name>
+		<url-pattern>/RecoverPasswordAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewServlet</servlet-name>
+		<url-pattern>/viewServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateAction</servlet-name>
+		<url-pattern>/updateAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FileUploadAction</servlet-name>
+		<url-pattern>/fileUpload</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>checkuseraction</servlet-name>
+		<servlet-class>com.dts.dae.action.ChekUserAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>checkuseraction</servlet-name>
+		<url-pattern>/ChekUserAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutAction</servlet-name>
+		<servlet-class>com.dts.dae.action.LogoutAction</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadAction</servlet-name>
+		<servlet-class>co.dts.fss.action.UploadAction</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadAction</servlet-name>
+		<servlet-class>com.dts.fss.action.DownloadAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>OwnFileAction</servlet-name>
+		<servlet-class>com.dts.fss.action.OwnFileAction</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>LogoutAction</servlet-name>
+		<url-pattern>/LogoutAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadAction</servlet-name>
+		<url-pattern>/UploadAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadAction</servlet-name>
+		<url-pattern>/DownloadAction</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OwnFileAction</servlet-name>
+		<url-pattern>/OwnFileAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+
+		<servlet-name>Reserve</servlet-name>
+		<servlet-class>Reserve</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>BookTicket</servlet-name>
+		<servlet-class>BookTicket</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddRoute</servlet-name>
+		<servlet-class>com.ewheelz.Action.AddRouteAction</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CancleRoot</servlet-name>
+		<servlet-class>com.ewheelz.Action.CancleRootAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>AddBus</servlet-name>
+		<servlet-class>com.ewheelz.Action.AddBusAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>PickupPoint</servlet-name>
+		<servlet-class>com.ewheelz.Action.PickupPointAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>CancleBus</servlet-name>
+		<servlet-class>com.ewheelz.Action.CancleBusAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>canclepickup</servlet-name>
+		<servlet-class>com.ewheelz.Action.CanclePickupAction</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>CheckAvalability</servlet-name>
+		<servlet-class>com.ewheelz.Action.CheckAvalability</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>BusShedule</servlet-name>
+		<servlet-class>com.ewheelz.Action.BusShedule</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>Reservation</servlet-name>
+		<servlet-class>com.ewheelz.Action.ReservationAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>CancelBusshedule</servlet-name>
+		<servlet-class>com.ewheelz.Action.CancelBusshedule</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>UpdateBus</servlet-name>
+		<servlet-class>com.ewheelz.Action.UpdateBus</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>UpdateRoute</servlet-name>
+		<servlet-class>com.ewheelz.Action.UpdateRoute</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>UpdatePickup</servlet-name>
+		<servlet-class>com.ewheelz.Action.UpdatePickup</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>UpdateShedule</servlet-name>
+		<servlet-class>com.ewheelz.Action.UpdateShedule</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>BusSeat</servlet-name>
+		<servlet-class>com.ewheelz.Action.BusSeatAction</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>PassengerSeat</servlet-name>
+		<servlet-class>com.ewheelz.Action.PassengerSeat</servlet-class>
+	</servlet>
+	<servlet>
+		<description>
+			This is the description of my J2EE component
+		</description>
+		<display-name>
+			This is the display name of my J2EE component
+		</display-name>
+		<servlet-name>SeatControl</servlet-name>
+		<servlet-class>com.ewheelz.Action.SeatControl</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>SeatStorage</servlet-name>
+		<servlet-class>com.ewheelz.Action.SeatStorage</servlet-class>
+	</servlet>
+  <servlet>
+    
+    <servlet-name>GetSeat</servlet-name>
+    <servlet-class>com.ewheelz.Action.GetSeat</servlet-class>
+  </servlet>
+  <servlet>
+    
+    <servlet-name>CancleSeat</servlet-name>
+    <servlet-class>com.ewheelz.Action.CancleSeatAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>Fair</servlet-name>
+    <servlet-class>com.ewheelz.Action.Fair</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ViewFair</servlet-name>
+    <servlet-class>com.ewheelz.Action.ViewFair</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateFair</servlet-name>
+    <servlet-class>com.ewheelz.Action.UpdateFair</servlet-class>
+  </servlet>
+
+ <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ViewCustomersAction</servlet-name>
+    <servlet-class>com.ewheelz.Action.ViewCustomersAction</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<servlet-mapping>
+		<servlet-name>ViewCustomersAction</servlet-name>
+		<url-pattern>/ViewCustomersAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>Reserve</servlet-name>
+		<url-pattern>/servlet/Reserve</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BookTicket</servlet-name>
+		<url-pattern>/BookTicket</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddRoute</servlet-name>
+		<url-pattern>/addroute</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CancleRoot</servlet-name>
+		<url-pattern>/cancleroute</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddBus</servlet-name>
+		<url-pattern>/addbus</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PickupPoint</servlet-name>
+		<url-pattern>/addpickup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CancleBus</servlet-name>
+		<url-pattern>/canclebus</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>canclepickup</servlet-name>
+		<url-pattern>/canclepickup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CheckAvalability</servlet-name>
+		<url-pattern>/availability</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BusShedule</servlet-name>
+		<url-pattern>/shedulebus</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Reservation</servlet-name>
+		<url-pattern>/Reservation</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CancelBusshedule</servlet-name>
+		<url-pattern>/CancelBusshedule</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateBus</servlet-name>
+		<url-pattern>/busupdate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateRoute</servlet-name>
+		<url-pattern>/UpdateRoute</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdatePickup</servlet-name>
+		<url-pattern>/UpdatePickup</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateShedule</servlet-name>
+		<url-pattern>/UpdateShedule</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BusSeat</servlet-name>
+		<url-pattern>/BusSeat</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PassengerSeat</servlet-name>
+		<url-pattern>/PassengerSeat</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SeatControl</servlet-name>
+		<url-pattern>/SeatControl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SeatStorage</servlet-name>
+		<url-pattern>/SeatStorage</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetSeat</servlet-name>
+    <url-pattern>/GetSeat</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CancleSeat</servlet-name>
+    <url-pattern>/CancleSeat</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Fair</servlet-name>
+    <url-pattern>/Fair</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewFair</servlet-name>
+    <url-pattern>/ViewFair</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateFair</servlet-name>
+    <url-pattern>/UpdateFair</url-pattern>
+  </servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>Home.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
